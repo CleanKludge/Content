@@ -1,0 +1,10 @@
+{
+    "enabled": true,
+    "identifier": "storytests",
+    "created": "2017-04-22T14:23Z",
+    "description": "A testing library that adds support for a BDD style integration test structure.",
+    "author": "Steve",
+    "tags": [ "C#", "BDD", "Testing" ],
+    "title": "StoryTests",
+    "location": "Code"
+}

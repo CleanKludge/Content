@@ -1,0 +1,10 @@
+{
+    "enabled": true,
+    "identifier": "tablequeryparser",
+    "created": "2016-02-05T18:55Z",
+    "description": "TableQueryParser provides extension methods to the Microsoft Azure TableQuery class which allows them to be run against objects.",
+    "author": "Steve",
+    "tags": [ "C#", "TableStorage", "Azure", "Testing" ],
+    "title": "TableQueryParser",
+    "location": "Code"
+}
