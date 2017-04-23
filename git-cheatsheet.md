@@ -105,7 +105,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git alias | git config --global alias.alias '!git config -l \| grep alias \| cut -c 7-' | List aliases |
 | git bl master..HEAD | git config --global alias.bl "log --no-merges --pretty='%C(red)%h %C(cyan)[%an (%cr)]%C(reset) %s'" | Branch log |
 | git blm develop..HEAD | git config --global alias.blm "log --pretty='%C(red)%h %C(cyan)[%an (%cr)]%C(reset) %s'" | Branch log with merges |
-| git usm | !git config --file .gitmodules --get-regexp path \| awk '{ git submodule update --remote $2 }' | Updates all submodules |
+| git usm | !git config --file .gitmodules --get-regexp path \| awk '{ print $2 }' \| git submodule update --remote | Updates all submodules |
 
 ## Useful Flows
 ### Squash commits in a branch
