@@ -1,9 +1,10 @@
+# About
+
 A Cake AddIn that extends Cake with the ability to add items to the PATH.
 
 [![https://github.com/CleanKludge/Cake.Path](https://img.shields.io/badge/github-Cake.Path-brightgreen.svg)](https://github.com/CleanKludge/Cake.Path)
 [![cakebuild.net](https://img.shields.io/badge/WWW-cakebuild.net-blue.svg)](http://cakebuild.net/)
 [![NuGet Version](http://img.shields.io/nuget/v/Cake.Path.svg?style=flat)](https://www.nuget.org/packages/Cake.Path/)
-
 
 # Dependencies
 

@@ -1,8 +1,9 @@
+# About
+
 TableQueryParser provides extension methods to the Microsoft Azure TableQuery class which allows them to be run against objects.
 
 [![https://github.com/Korthax/TableQueryParser](https://img.shields.io/badge/github-TableQueryParser-brightgreen.svg)](https://github.com/Korthax/TableQueryParser)
 [![NuGet Version](http://img.shields.io/nuget/v/TableQueryParser.svg?style=flat)](https://www.nuget.org/packages/TableQueryParser/)
-
 
 # Dependencies
 
@@ -23,7 +24,7 @@ var query = new TableQuery<TableEntity>().Where(filter);
 var isMatch = rangeQuery.Validate(new TableEntity { PartitionKey = "Smith", RowKey = "ZZZ" }); // Returns true
 ```
 
-```csharp
+```csharp {data-language=csharp}
 var data = new List<TableEntity>
 {
     new TableEntity { PartitionKey = "Smith", RowKey = "Adam" },
