@@ -1,6 +1,6 @@
 {
     "enabled": true,
-    "identifier": "cake-path",
+    "identifier": "cake.path",
     "created": "2017-02-12T11:23Z",
     "description": "A Cake AddIn that extends Cake with the ability to add items to the PATH.",
     "author": "Steve",

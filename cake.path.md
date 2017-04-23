@@ -1,5 +1,3 @@
-# Cake.Path
-
 A Cake AddIn that extends Cake with the ability to add items to the PATH.
 
 [![https://github.com/CleanKludge/Cake.Path](https://img.shields.io/badge/github-Cake.Path-brightgreen.svg)](https://github.com/CleanKludge/Cake.Path)
@@ -7,17 +5,17 @@ A Cake AddIn that extends Cake with the ability to add items to the PATH.
 [![NuGet Version](http://img.shields.io/nuget/v/Cake.Path.svg?style=flat)](https://www.nuget.org/packages/Cake.Path/)
 
 
-## Dependencies
+# Dependencies
 
 * Cake v0.17
 
-## Including the AddIn
+# Including the AddIn
 
 ```csharp
 #addin "Cake.Path"
 ```
 
-## Usage
+# Usage
 
 ```csharp
 #addin "Cake.Path"
@@ -69,6 +67,6 @@ Task("ReloadPath")
 
 I've made this AddIn for use in my own cake scripts therefore they have only been tested on Windows. Use at your own risk :)
 
-## License
+# License
 
 StoryTests is released under the [MIT license](https://github.com/Korthax/StoryTests/blob/master/LICENSE.md).

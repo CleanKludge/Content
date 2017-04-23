@@ -1,9 +1,7 @@
-# Git Cheatsheet
-
 This page contains a few helpful git commands that I've picked along the way whilst learning git on the command line.
 
-## Helpful Commands
-### Information
+# Commands
+## Information
 
 | Command | Description |
 | --------| ----------- |
@@ -21,7 +19,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git diff --cached | Diff staged files |
 | git config --global -e | Edit git settings |
 
-### Updating
+## Updating
 
 | Command | Description |
 | --------| ----------- |
@@ -30,7 +28,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git pull | Gets new stuff from origin and merges it with working copy |
 | git pull --rebase &lt;branch&gt; | Gets new stuff from branch and rebases working copy on it |
 
-### Branching
+## Branching
 
 | Command | Description |
 | --------| ----------- |
@@ -41,7 +39,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git branch -m &lt;newname&gt; | Renames the current branch |
 | git push origin --delete &lt;branch_name&gt; | Deletes a remote branch |
 
-### Adding / Comitting
+## Adding / Comitting
 
 | Command | Description |
 | --------| ----------- |
@@ -51,7 +49,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git push | Pushes staged files to the remote origin |
 | git push -f | Force pushes staged files **over** the remote origin |
 
-### Clean Up
+## Clean Up
 
 | Command | Description |
 | --------| ----------- |
@@ -64,7 +62,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git revert -n &lt;commit&gt; | Reverts to a previous commit but does not automatically commit it |
 | git push -f origin &lt;last_good_commit&gt;:&lt;branch&gt; | Changes back to the selected last good commit on a branch |
 
-### Stashing
+## Stashing
 
 | Command | Description |
 | --------| ----------- |
@@ -74,7 +72,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git stash drop stash@{'&lt;n&gt;'} | Drops a single stash |
 | git stash pop | Applies and drops the latest stash |
 
-### Tagging
+## Tagging
 
 | Command | Description |
 | --------| ----------- |
@@ -84,7 +82,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git tag -d &lt;tag name&gt; | Delete a local tag |
 | git fetch --tags | Fetch remote tags |
 
-### Git Submodules
+## Git Submodules
 
 | Command | Description | Notes |
 | --------| ----------- | ----- |
@@ -95,7 +93,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git submodule update --remote &lt;path&gt; | Pulls in the changes from a remote submodule to the local working copy | |
 
 
-## Helpful Aliases
+# Aliases
 
 | Command | Alias | Description |
 | ------- | ----- | ----------- |
@@ -107,8 +105,8 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git blm develop..HEAD | git config --global alias.blm "log --pretty='%C(red)%h %C(cyan)[%an (%cr)]%C(reset) %s'" | Branch log with merges |
 | git usm | !git config --file .gitmodules --get-regexp path \| awk '{ print $2 }' \| git submodule update --remote | Updates all submodules |
 
-## Useful Flows
-### Squash commits in a branch
+# Flows
+## Squash commits in a branch
 1. Find a list of commit you want to squash
     * git log --pretty='%C(red)%h %C(cyan)[%an (%cr)]%C(reset) %s' master..&lt;branch&gt;
     * git cherry -v master
@@ -117,7 +115,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 3. 'pick' or 'reword' the 1st line and change all the rest to 'fixup'
 4. git push -f
 
-### Preparing for pull request
+## Preparing for pull request
 1. Update master branch
     * git fetch --all
 2. Squash all commits in your branch
@@ -130,7 +128,7 @@ This page contains a few helpful git commands that I've picked along the way whi
 6. Push your changes
     * git push
 
-### Clean up after pull request
+## Clean up after pull request
 1. git checkout master
 2. git fetch --all -p
 3. git branch -d &lt;merged_feature_branch&gt;

@@ -1,18 +1,16 @@
-# StoryTests
-
 A testing library that adds support for a BDD style integration test structure. It is designed to allow all integration tests to follow a similar pattern which helps create a consistent test style for a project.
 
 [![https://github.com/CleanKludge/StoryTests](https://img.shields.io/badge/github-StoryTests-brightgreen.svg)](https://github.com/CleanKludge/StoryTests)
 [![NuGet Version](http://img.shields.io/nuget/v/StoryTests.svg?style=flat)](https://www.nuget.org/packages/StoryTests/)
 
-## Installation
+# Installation
 ```
 Install-Package StoryTests
 ```
 
-## Usage
+# Usage
 
-### Basic
+## Basic
 
 You can create a story from a single subject and up to four additional services.
 
@@ -33,15 +31,15 @@ string content = await Given.ANewStoryAbout(new HttpClient(), new HttpRequestMes
     .ThenReturn(response => response.Content.ReadAsStringAsync());
 ```
 
-### Advanced
+## Advanced
 
 *Coming soon*
 
-## Methods
+# Methods
 
 *Note: All methods support both sync and async calls*
 
-### Givens
+## Givens
 ```csharp
 var story = Given.ANewStoryAbout(Subject);
 var story = Given.ANewStoryAbout(Subject, Service1);
@@ -49,7 +47,7 @@ var story = Given.ANewStoryAbout(Subject, Service1, Service2);
 var story = Given.ANewStoryAbout(Subject, Service1, Service2, Service3);
 var story = Given.ANewStoryAbout(Subject, Service1, Service2, Service3, Service4);
 ```
-### With
+## With
 ```csharp
 var story = story.With(subject => {});
 var story = story.With(service1 => {});
@@ -58,7 +56,7 @@ var story = story.With(service3 => {});
 var story = story.With(service4 => {});
 ```
 
-### And
+## And
 ```csharp
 var story = story.And(subject => {});
 var story = story.And(service1 => {});
@@ -67,12 +65,12 @@ var story = story.And(service3 => {});
 var story = story.And(service4 => {});
 ```
 
-### When
+## When
 ```csharp
 var story = story.When(subject => { return result; });
 ```
 
-### WhenCalling
+## WhenCalling
 ```csharp
 var story = story.When(subject => { return result; });
 var story = story.When((subject, service1) => { return result; });
@@ -81,7 +79,7 @@ var story = story.When((subject, service1, service2, service3) => { return resul
 var story = story.When((subject, service1, service2, service3, service4) => { return result; });
 ```
 
-### ThenCalling
+## ThenCalling
 ```csharp
 var story = story.ThenCalling((subject, result) => { return newResult; });
 var story = story.ThenCalling((service1, result) => { return newResult; });
@@ -90,7 +88,7 @@ var story = story.ThenCalling((service3, result) => { return newResult; });
 var story = story.ThenCalling((service4, result) => { return newResult; });
 ```
 
-### Then
+## Then
 ```csharp
 var story = story.Then(result => { });
 var story = story.ThenCalling((subject, result) => { });
@@ -100,17 +98,17 @@ var story = story.ThenCalling((service3, result) => { });
 var story = story.ThenCalling((service4, result) => { });
 ```
 
-### ThenReturn
+## ThenReturn
 ```csharp
 var newResult = story.ThenReturn(result => { return newResult });
 ```
 
-### ThenReturnTheResult
+## ThenReturnTheResult
 ```csharp
 var result = story.ThenReturnTheResult();
 ```
 
-## Tips
+# Tips
 
 I like to create my own Given wrappers which allows me to abstract away common setups
 
@@ -124,12 +122,12 @@ public class Given
 }
 ```
 
-## General Notes
+# General Notes
 
 **This is an initial version and not tested thoroughly**.
 
 I've made this library mainly for use in my own projects so use at your own risk :)
 
-## License
+# License
 
 StoryTests is released under the [MIT license](https://github.com/Korthax/StoryTests/blob/master/LICENSE.md).
