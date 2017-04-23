@@ -24,7 +24,7 @@ var query = new TableQuery<TableEntity>().Where(filter);
 var isMatch = rangeQuery.Validate(new TableEntity { PartitionKey = "Smith", RowKey = "ZZZ" }); // Returns true
 ```
 
-```csharp {data-language=csharp}
+```csharp
 var data = new List<TableEntity>
 {
     new TableEntity { PartitionKey = "Smith", RowKey = "Adam" },

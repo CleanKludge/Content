@@ -1,3 +1,5 @@
+# About
+
 This page contains a few helpful git commands that I've picked along the way whilst learning git on the command line.
 
 # Commands
