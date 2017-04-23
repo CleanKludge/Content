@@ -84,6 +84,17 @@ This page contains a few helpful git commands that I've picked along the way whi
 | git tag -d &lt;tag name&gt; | Delete a local tag |
 | git fetch --tags | Fetch remote tags |
 
+### Git Submodules
+
+| Command | Description | Notes |
+| --------| ----------- | ----- |
+| git submodule add &lt;Suri&gt; &lt;Spath&gt; | Creates submodule at the set path | Make sure the path in .gitmodules contains / instead of \\ |
+| git rm --cached &lt;path&gt; | Removes a submodule directory | Use this command before reinitialising the submodule |
+| git submodule update --init | Initialises a new submodule | |
+| git submodule sync | Syncs a submodule with the remote | |
+| git submodule update --remote &lt;path&gt; | Pulls in the changes from a remote submodule to the local working copy | |
+
+
 ## Helpful Aliases
 
 | Command | Alias | Description |
