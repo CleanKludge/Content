@@ -41,7 +41,7 @@ string content = await Given.ANewStoryAbout(new HttpClient(), new HttpRequestMes
 
 *Note: All methods support both sync and async calls*
 
-## Givens
+## Given
 ```csharp
 var story = Given.ANewStoryAbout(Subject);
 var story = Given.ANewStoryAbout(Subject, Service1);
