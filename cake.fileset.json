@@ -1,0 +1,11 @@
+{
+    "enabled": true,
+    "identifier": "cake.file",
+    "created": "2017-06-28T23:27Z",
+    "description": "AddIn that adds filesets to Cake using Microsoft.Extensions.FileSystemGlobbing which allows for both include and exclude patterns to be specified..",
+    "author": "Steve",
+    "tags": [ "Cake" ],
+    "keywords": [ "Cake", "BuildScript" ],
+    "title": "Cake.FileSet",
+    "location": "Code"
+}
